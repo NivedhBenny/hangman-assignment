@@ -41,9 +41,11 @@ function cs53_initializeAlphas(){
 }
 
 document.addEventListener("keydown",function(event){
-    var cs53_character = event.key;
-    cs53_checkChar(cs53_character);
-    cs53_showChosen(cs53_character);
+    if (event.keyCode >= 65 && event.keyCode <= 90) {
+        var cs53_character = event.key;
+        cs53_checkChar(cs53_character);
+        cs53_showChosen(cs53_character);
+    }
 });
 
 function cs53_clearChosenList() {

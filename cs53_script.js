@@ -68,7 +68,6 @@ function cs53_init(){
     document.querySelector(".cs53_message").innerHTML="";
     cs53_lives=6;
     document.getElementById("cs53_tries").innerHTML=cs53_lives;
-    console.log(cs53_word);
     cs53_clearChosenList();
     cs53_choice=0;
     cs53_correct=false;
@@ -81,7 +80,6 @@ cs53_init();
 var cs53_correct=false;
 var cs53_flag=0;
 function cs53_checkChar(cs53_char){
-    console.log(cs53_alphabets[cs53_char]);
     if(cs53_alphabets[cs53_char]==0){
         cs53_flag=0;
     }else{
@@ -148,8 +146,6 @@ function cs53_checkChar(cs53_char){
         
     }
 }
-console.log(cs53_score);
-
 function cs53_showChosen(cs53_char){
     document.getElementById("cs53_tries").innerHTML=cs53_lives;
     var cs53_list = document.getElementById("cs53_chosen");
